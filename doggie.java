@@ -14,7 +14,7 @@ public class doggie {
 	public static int jump(int amount) {
 		if (amount == 0) {
 			System.out.println(":(");
-			return 0;
+			return amount;
 		} else if (amount > 1 && amount <= 5) {
 			System.out.println("mehhh");
 			return amount;
