@@ -1,10 +1,10 @@
-// Create a doggie
+// Create a penguin
 
-public class doggie {
-	public static int waggle(int happy) {
+public class penguin {
+	public static int waddle(int happy) {
 		if (happy <= 10) {
-			System.out.println("waggle");
-			return waggle(happy + 1);
+			System.out.println("waddle");
+			return waddle(happy + 1);
 		} else {
 			System.out.println("calm");
 			return happy;
@@ -16,11 +16,10 @@ public class doggie {
 			System.out.println("quiet");
 			return amount;
 		} else if (amount > 1 && amount <= 5) {
-			System.out.println("bark");
+			System.out.println("hwakawkaw");
 			return amount;
 		} else {
 			return talk(amount / 5) + talk(amount - 1);
 		}
 	}
-
 }
