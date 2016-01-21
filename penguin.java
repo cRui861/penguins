@@ -1,6 +1,14 @@
-// Create a penguin
+/**
+ * Creates a penguin. Penguin can waddle or even talk
+ */
+public class Penguin {
 
-public class penguin {
+    /**
+     * Makes penguin waddle
+     *
+     * @param happy    penguin's current happiness as an integer
+     * @return         penguin's final happiness as an integer
+     */
 	public static int waddle(int happy) {
 		if (happy <= 10) {
 			System.out.println("waddle");
@@ -11,6 +19,12 @@ public class penguin {
 		}
 	}
 
+    /**
+     * Makes penguin talk
+     *
+     * @param amount    penguin's current loquaciousness as an integer
+     * @return          penguin's final loquaciousness as an integer
+     */
 	public static int talk(int amount) {
 		if (amount == 0) {
 			System.out.println("quiet");
