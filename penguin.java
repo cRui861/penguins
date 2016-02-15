@@ -1,7 +1,19 @@
+import java.awt.FlowLayout;
+import java.net.URL;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+
 /**
- * Creates a penguin. Penguin can waddle or even talk
+ * Creates a penguin. Penguin can waddle, talk or dance
  */
 public class Penguin {
+
+	private static final String PENGUIN_GIF = "./penguin.gif";
+	private static final String PENGUIN_JFRAME_NAME = "Dancing Penguins";
 
     /**
      * Makes penguin waddle
@@ -17,6 +29,31 @@ public class Penguin {
 			System.out.println("calm");
 			return happy;
 		}
+	}
+
+	/**
+	 * Displays a line of dancing penguins
+	 *
+	 * @param numOfPenguins    the number of dancing penguins to display
+	 *
+	 */
+	public static void lineOfDancingPenguins(int numOfPenguins) {
+		
+		URL url = Doggie.class.getResource(PENGUIN_GIF);
+        Icon penguin = new ImageIcon(url);
+        JFrame frame = new JFrame(PENGUIN_JFRAME_NAME);
+        JPanel container = new JPanel();
+		container.setLayout(new FlowLayout(FlowLayout.CENTER));
+
+        for (int i = 0; i < numOfPenguins; i++) {
+        	container.add(new JLabel(penguin));
+        }
+
+        frame.add(container);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
 	}
 
     /**
